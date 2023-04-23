@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Body Fat Calculator</string>
+    <string name="how"><u>Know about calculation method</u></string>
+    <string name="height">Height</string>
+    <string name="Weight">Weight</string>
+    <string name="about">
+\n<b>U.S. Navy Method:</b>\n
+
+There are many specific techniques used for measuring body fat. The calculator above uses a method involving equations developed at the Naval Health Research Center by Hodgdon and Beckett in 1984.\n\n
+<b>Body fat percentage (BFP) formula for males:</b>\n
+
+
+SI, Metric Units:\n
+BFP =
+495
+1.0324 - 0.19077×log10(waist-neck) + 0.15456×log10(height)
+        - 450\n\n<b>Body fat percentage (BFP) formula for females:</b>\n
+
+SI, Metric Units:\n
+BFP =
+495
+1.29579 - 0.35004×log10(waist+hip-neck) + 0.22100×log10(height)
+- 450
+
+    </string>
+
 </resources>

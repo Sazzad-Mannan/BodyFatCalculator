@@ -1,14 +1,19 @@
 package com.riftech.bodyfatcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Objects;
@@ -24,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button=(Button)findViewById(R.id.button);
+        ProgressBar pgsBar = (ProgressBar) findViewById(R.id.pBar);
         Spinner dropdown = findViewById(R.id.spinner);
         Spinner dropdown1 = findViewById(R.id.spinner3);
         Spinner dropdown2 = findViewById(R.id.spinner4);
@@ -35,9 +41,47 @@ public class MainActivity extends AppCompatActivity {
         EditText editText3 = (EditText)findViewById(R.id.editTextNumberDecimal6);
         EditText editText4 = (EditText)findViewById(R.id.editTextNumberDecimal8);
         EditText editText5 = (EditText)findViewById(R.id.editTextNumberDecimal10);
+        TextView txt1=(TextView)findViewById(R.id.textView10);
+        TextView txt2=(TextView)findViewById(R.id.textView2);
+        TextView txt3=(TextView)findViewById(R.id.textView8);
+        TextView txt4=(TextView)findViewById(R.id.textView4);
+        TextView txt5=(TextView)findViewById(R.id.textView5);
+        TextView txt6=(TextView)findViewById(R.id.textView9);
+        TextView txt7=(TextView)findViewById(R.id.textView7);
+        //dropdown.setPopupBackgroundResource(R.drawable.spinner);
+        //ConstraintLayout main=(ConstraintLayout) findViewById(R.id.main);
+        //RelativeLayout rl=(RelativeLayout)findViewById(R.id.progressLayout);
+
+
+        txt1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                pgsBar.setVisibility(View.VISIBLE);
+                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+
+
+
+                        pgsBar.setVisibility(View.GONE);
+                        startActivity(intent);
+
+                        //main.setVisibility(View.VISIBLE);
+                    }
+                }, 4000);
+
+            }
+        });
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+
+
+
+
                 // click handling code
                 h_unit = dropdown.getSelectedItem().toString();
                 w_unit = dropdown1.getSelectedItem().toString();
@@ -49,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), "Please enter your height, weight,waist, neck and hip measurements.", Toast.LENGTH_SHORT);
                     toast.show();
                 }else {
+                    pgsBar.setVisibility(View.VISIBLE);
                     weight = Float.parseFloat(editText2.getText().toString());
                     height = Float.parseFloat(editText1.getText().toString());
                     waist = Float.parseFloat(editText3.getText().toString());
@@ -83,7 +128,21 @@ if(Objects.equals(gender, "Male")){
                     Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                     intent.putExtra("bfp", bfp);
                     intent.putExtra("gender", gender);
-                    startActivity(intent);
+
+                    new Handler().postDelayed(new Runnable() {
+
+                        @Override
+                        public void run() {
+
+
+
+                            pgsBar.setVisibility(View.GONE);
+                            startActivity(intent);
+
+                            //main.setVisibility(View.VISIBLE);
+                        }
+                    }, 4000);
+
                 }
             }
         });

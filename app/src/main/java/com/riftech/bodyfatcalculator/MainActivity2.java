@@ -64,7 +64,7 @@ public class MainActivity2 extends AppCompatActivity {
                 type="Lean";
                 txt1.setTextColor(Color.parseColor("#91BF77"));
             } else if (bfp<20) {
-                type="Moderately Fat";
+                type="Moderately Lean";
                 txt1.setTextColor(Color.parseColor("#62C924"));
             }else if (bfp<30) {
                 type="Excess Fat";
