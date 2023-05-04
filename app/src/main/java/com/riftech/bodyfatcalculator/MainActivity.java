@@ -1,11 +1,15 @@
 package com.riftech.bodyfatcalculator;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -27,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*ActionBar bar = getSupportActionBar();
+        assert bar != null;
+        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FFFFFFFF")));
+        bar.setTitle(Html.fromHtml("<font color='#000000'>"+getString(R.string.app_name)+"</font>"));*/
 
         Button button=(Button)findViewById(R.id.button);
         ProgressBar pgsBar = (ProgressBar) findViewById(R.id.pBar);
@@ -71,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
                         //main.setVisibility(View.VISIBLE);
                     }
-                }, 4000);
+                }, 5000);
 
             }
         });
@@ -90,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 p_unit = dropdown5.getSelectedItem().toString();
                 gender = dropdown4.getSelectedItem().toString();
                 if(editText1.getText().toString().equals("") || editText2.getText().toString().equals("")|| editText3.getText().toString().equals("")|| editText4.getText().toString().equals("")|| editText5.getText().toString().equals("")){
-                    Toast toast = Toast.makeText(getApplicationContext(), "Please enter your height, weight,waist, neck and hip measurements.", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.toast), Toast.LENGTH_SHORT);
                     toast.show();
                 }else {
                     pgsBar.setVisibility(View.VISIBLE);
@@ -99,23 +108,23 @@ public class MainActivity extends AppCompatActivity {
                     waist = Float.parseFloat(editText3.getText().toString());
                     neck = Float.parseFloat(editText4.getText().toString());
                     hip = Float.parseFloat(editText5.getText().toString());
-                    if (Objects.equals(h_unit, "ft")) {
+                    if (Objects.equals(h_unit, getString(R.string.ft))) {
                         height = height * 30.48;
                     }
 
-                    if (Objects.equals(w_unit, "lbs")) {
+                    if (Objects.equals(w_unit, getString(R.string.lbs))) {
                         weight = weight * 0.45359237;
                     }
-                    if (Objects.equals(wi_unit, "in")) {
+                    if (Objects.equals(wi_unit, getString(R.string.in))) {
                         waist = waist * 2.54;
                     }
-                    if (Objects.equals(n_unit, "in")) {
+                    if (Objects.equals(n_unit, getString(R.string.in))) {
                         neck = neck * 2.54;
                     }
-                    if (Objects.equals(p_unit, "in")) {
+                    if (Objects.equals(p_unit, getString(R.string.in))) {
                         hip = hip * 2.54;
                     }
-if(Objects.equals(gender, "Male")){
+if(Objects.equals(gender, getString(R.string.male))){
     bfp=(495/(1.0324-(0.19077*Math.log10(waist-neck))+(0.15456*Math.log10(height))))-450;
 }else{
     bfp=(495/(1.29579-(0.35004*Math.log10(waist+hip-neck))+(0.22100*Math.log10(height))))-450;
@@ -141,7 +150,7 @@ if(Objects.equals(gender, "Male")){
 
                             //main.setVisibility(View.VISIBLE);
                         }
-                    }, 4000);
+                    }, 5000);
 
                 }
             }
@@ -150,10 +159,10 @@ if(Objects.equals(gender, "Male")){
         //get the spinner from the xml.
 
 //create a list of items for the spinner.
-        String[] items = new String[]{"ft", "cm"};
-        String[] items1 = new String[]{"kg", "lbs"};
-        String[] items2 = new String[]{"Female", "Male"};
-        String[] items3 = new String[]{"in", "cm"};
+        String[] items = new String[]{getString(R.string.ft), getString(R.string.cm)};
+        String[] items1 = new String[]{getString(R.string.kg), getString(R.string.lbs)};
+        String[] items2 = new String[]{getString(R.string.male),getString(R.string.female)};
+        String[] items3 = new String[]{getString(R.string.in), getString(R.string.cm)};
 
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.

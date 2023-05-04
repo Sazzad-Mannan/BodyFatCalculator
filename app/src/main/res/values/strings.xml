@@ -3,6 +3,11 @@
     <string name="how"><u>Know about calculation method</u></string>
     <string name="height">Height</string>
     <string name="Weight">Weight</string>
+    <string name="Waist">Waist</string>
+    <string name="Neck">Neck</string>
+    <string name="Hip">Hip</string>
+    <string name="Gender">Gender</string>
+    <string name="Calculate">Calculate</string>
     <string name="about">
 \n<b>U.S. Navy Method:</b>\n
 
@@ -12,16 +17,49 @@ There are many specific techniques used for measuring body fat. The calculator a
 
 SI, Metric Units:\n
 BFP =
-495
-1.0324 - 0.19077×log10(waist-neck) + 0.15456×log10(height)
+495/(1.0324 - 0.19077×log10(waist-neck) + 0.15456×log10(height))
         - 450\n\n<b>Body fat percentage (BFP) formula for females:</b>\n
 
 SI, Metric Units:\n
 BFP =
-495
-1.29579 - 0.35004×log10(waist+hip-neck) + 0.22100×log10(height)
+495/(1.29579 - 0.35004×log10(waist+hip-neck) + 0.22100×log10(height))
 - 450
 
     </string>
+<string name="your">Your Body Fat Percentage is:</string>
+    <string name="lean">LEAN</string>
+    <string name="title">BODY FAT % CHART</string>
+    <string name="m">MEN</string>
+    <string name="f">WOMEN</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="in">in</string>
+    <string name="ft">ft</string>
+    <string name="kg">kg</string>
+    <string name="lbs">lbs</string>
+    <string name="cm">cm</string>
+    <string name="toast">Please enter your height, weight,waist, neck and hip measurements.</string>
+    <string name="l1">LOW BODY FAT RISK</string>
+    <string name="l2">ULTRA LEAN</string>
+    <string name="l3">LEAN</string>
+    <string name="l4">MODERATELY FAT</string>
+    <string name="l5">EXCESS FAT</string>
+    <string name="l6">HIGH BODY FAT RISK</string>
+    <string name="m1">5%</string>
+    <string name="m2">8%</string>
+    <string name="m3">12%</string>
+    <string name="m4">20%</string>
+    <string name="m5">30%</string>
+    <string name="f1">15%</string>
+    <string name="f2">18%</string>
+    <string name="f3">22%</string>
+    <string name="f4">30%</string>
+    <string name="f5">40%</string>
+    <string name="d1">Ask your healthcare provider about how to safely increase your body fat.</string>
+    <string name="d2">This is the body fat level that is often found in most elite athletes.</string>
+    <string name="d3">This body fat level is lower than most people and excellent for health.</string>
+    <string name="d4">This body fat level is generally acceptable for good health.</string>
+    <string name="d5">This body fat level indicates an excess accumulation of fat.</string>
+    <string name="d6">Ask your healthcare provider about how to safely decrease your body fat.</string>
 
 </resources>
