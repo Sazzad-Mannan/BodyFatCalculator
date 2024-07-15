@@ -62,4 +62,349 @@ BFP =
     <string name="d5">This body fat level indicates an excess accumulation of fat.</string>
     <string name="d6">Ask your healthcare provider about how to safely decrease your body fat.</string>
 
+
+    <!--    indonesian-->
+    <string name="app_name_ind">Kalkulator Lemak Tubuh</string>
+    <string name="how_ind"><u>Mengetahui tentang metode penghitungan</u></string>
+    <string name="height_ind">Tinggi</string>
+    <string name="Weight_ind">Berat</string>
+    <string name="Waist_ind">Pinggang</string>
+    <string name="Neck_ind">Leher</string>
+    <string name="Hip_ind">Pinggul</string>
+    <string name="Gender_ind">Jenis Kelamin</string>
+    <string name="Calculate_ind">Hitung</string>
+    <string name="about_ind">
+\n<b>AS. Metode Angkatan Laut:</b>\n
+
+Ada banyak teknik khusus yang digunakan untuk mengukur lemak tubuh. Kalkulator di atas menggunakan metode yang melibatkan persamaan yang dikembangkan di Pusat Penelitian Kesehatan Angkatan Laut oleh Hodgdon dan Beckett pada tahun 1984.\n\n
+<b>Rumus persentase lemak tubuh (BFP) untuk pria:</b>\n
+
+
+SI, Satuan Metrik:\n
+BFP =
+495/(1,0324 - 0,19077×log10(pinggang-leher) + 0,15456×log10(tinggi))
+        - 450\n\n<b>Formula persentase lemak tubuh (BFP) untuk wanita:</b>\n
+
+SI, Satuan Metrik:\n
+BFP =
+495/(1,29579 - 0,35004×log10(pinggang+pinggul-leher) + 0,22100×log10(tinggi))
+- 450
+
+    </string>
+    <string name="your_ind">Persentase Lemak Tubuh Anda adalah:</string>
+    <string name="lean_ind">LEAN</string>
+    <string name="title_ind">BAGAN % LEMAK TUBUH</string>
+    <string name="m_ind">PRIA</string>
+    <string name="f_ind">WANITA</string>
+    <string name="male_ind">Pria</string>
+    <string name="female_ind">Wanita</string>
+    <string name="toast_ind">Silakan masukkan ukuran tinggi badan, berat badan, pinggang, leher, dan pinggul Anda.</string>
+    <string name="l1_ind">RISIKO LEMAK TUBUH RENDAH</string>
+    <string name="l2_ind">ULTRA LEAN</string>
+    <string name="l3_ind">LEAN</string>
+    <string name="l4_ind">SEDANG GEMUK</string>
+    <string name="l5_ind">KELEBIHAN LEMAK</string>
+    <string name="l6_ind">RISIKO LEMAK TUBUH TINGGI</string>
+    <string name="d1_ind">Tanyakan kepada penyedia layanan kesehatan Anda tentang cara meningkatkan lemak tubuh dengan aman.</string>
+    <string name="d2_ind">Inilah tingkat lemak tubuh yang sering ditemukan pada sebagian besar atlet elit.</string>
+    <string name="d3_ind">Tingkat lemak tubuh ini lebih rendah dibandingkan kebanyakan orang dan sangat baik untuk kesehatan.</string>
+    <string name="d4_ind">Tingkat lemak tubuh ini secara umum dapat diterima untuk kesehatan yang baik.</string>
+    <string name="d5_ind">Tingkat lemak tubuh ini menunjukkan adanya penumpukan lemak berlebih.</string>
+    <string name="d6_ind">Tanyakan kepada penyedia layanan kesehatan Anda tentang cara mengurangi lemak tubuh dengan aman.</string>
+
+
+    <!--Spanish-->
+    <string name="app_name_sp">Calculadora de grasa corporal</string>
+    <string name="how_sp"><u>Conozca el método de cálculo</u></string>
+    <string name="height_sp">Altura</string>
+    <string name="Weight_sp">Peso</string>
+    <string name="Waist_sp">Cintura</string>
+    <string name="Neck_sp">Cuello</string>
+    <string name="Hip_sp">Cadera</string>
+    <string name="Gender_sp">Género</string>
+    <string name="Calculate_sp">Calcular</string>
+    <string name="about_sp">
+        \n<b>EE.UU. Método azul marino:</b>\n
+
+        Existen muchas técnicas específicas que se utilizan para medir la grasa corporal. La calculadora anterior utiliza un método que involucra ecuaciones desarrolladas en el Centro de Investigación de Salud Naval por Hodgdon y Beckett en 1984.\n\n
+        <b>Fórmula de porcentaje de grasa corporal (BFP) para hombres:</b>\n
+
+
+        SI, unidades métricas:\n
+        BFP =
+        495/(1.0324 - 0.19077×log10(cintura-cuello) + 0.15456×log10(altura))
+        - 450\n\n<b>Fórmula de porcentaje de grasa corporal (BFP) para mujeres:</b>\n
+
+        SI, unidades métricas:\n
+        BFP =
+        495/(1,29579 - 0,35004×log10(cintura+cadera-cuello) + 0,22100×log10(altura))
+        - 450
+
+    </string>
+    <string name="your_sp">Tu porcentaje de grasa corporal es:</string>
+    <string name="lean_sp">LEAN</string>
+    <string name="title_sp">GRÁFICO DE % DE GRASA CORPORAL</string>
+    <string name="m_sp">HOMBRE</string>
+    <string name="f_sp">MUJERES</string>
+    <string name="male_sp">Hombre</string>
+    <string name="female_sp">Mujer</string>
+    <string name="toast_sp">Ingrese sus medidas de altura, peso, cintura, cuello y cadera.</string>
+    <string name="l1_sp">RIESGO DE BAJO GRASA CORPORAL</string>
+    <string name="l2_sp">ULTRA LEAN</string>
+    <string name="l3_sp">LEANO</string>
+    <string name="l4_sp">MODERADAMENTE GORDO</string>
+    <string name="l5_sp">EXCESO DE GRASA</string>
+    <string name="l6_sp">RIESGO ALTO DE GRASA CORPORAL</string>
+    <string name="d1_sp">Pregúntele a su proveedor de atención médica cómo aumentar su grasa corporal de manera segura.</string>
+    <string name="d2_sp">Este es el nivel de grasa corporal que suele encontrarse en la mayoría de los atletas de élite.</string>
+    <string name="d3_sp">Este nivel de grasa corporal es más bajo que el de la mayoría de las personas y excelente para la salud.</string>
+    <string name="d4_sp">Este nivel de grasa corporal es generalmente aceptable para una buena salud.</string>
+    <string name="d5_sp">Este nivel de grasa corporal indica una acumulación excesiva de grasa.</string>
+    <string name="d6_sp">Pregúntele a su proveedor de atención médica cómo reducir su grasa corporal de manera segura.</string>
+
+<!--    Italian-->
+    <string name="app_name_it">Calcolatore del grasso corporeo</string>
+    <string name="how_it"><u>Conosci il metodo di calcolo</u></string>
+    <string name="height_it">Altezza</string>
+    <string name="Weight_it">Peso</string>
+    <string name="Waist_it">Vita</string>
+    <string name="Neck_it">Collo</string>
+    <string name="Hip_it">Anca</string>
+    <string name="Gender_it">Sesso</string>
+    <string name="Calculate_it">Calcola</string>
+    <string name="about_it">
+\n<b>Stati Uniti Metodo della Marina:</b>\n
+
+Esistono molte tecniche specifiche utilizzate per misurare il grasso corporeo. Il calcolatore qui sopra utilizza un metodo che coinvolge equazioni sviluppato presso il Naval Health Research Center da Hodgdon e Beckett nel 1984.\n\n
+<b>Formula della percentuale di grasso corporeo (BFP) per i maschi:</b>\n
+
+
+SI, unità metriche:\n
+BFP =
+495/(1.0324 - 0.19077×log10(vita-collo) + 0.15456×log10(altezza))
+        - 450\n\n<b>Formula della percentuale di grasso corporeo (BFP) per le donne:</b>\n
+
+SI, unità metriche:\n
+BFP =
+495/(1.29579 - 0.35004×log10(vita+collo) + 0.22100×log10(altezza))
+- 450
+
+    </string>
+    <string name="your_it">La tua percentuale di grasso corporeo è:</string>
+    <string name="lean_it">LEAN</string>
+    <string name="title_it">GRAFICO % GRASSO CORPOREO</string>
+    <string name="m_it">UOMINI</string>
+    <string name="f_it">DONNE</string>
+    <string name="male_it">Maschio</string>
+    <string name="female_it">Femmina</string>
+    <string name="toast_it">Inserisci le tue misure di altezza, peso, vita, collo e fianchi.</string>
+    <string name="l1_it">BASSO RISCHIO DI GRASSO CORPOREO</string>
+    <string name="l2_it">ULTRA SOTTILE</string>
+    <string name="l3_it">LEAN</string>
+    <string name="l4_it">MODERATAMENTE GRASSO</string>
+    <string name="l5_it">GRASSO IN ECCESSO</string>
+    <string name="l6_it">ALTO RISCHIO GRASSO CORPOREO</string>
+    <string name="d1_it">Chiedi al tuo medico come aumentare in modo sicuro il grasso corporeo.</string>
+    <string name="d2_it">Questo è il livello di grasso corporeo che si riscontra spesso nella maggior parte degli atleti d\'élite.</string>
+    <string name="d3_it">Questo livello di grasso corporeo è inferiore a quello della maggior parte delle persone ed è eccellente per la salute.</string>
+    <string name="d4_it">Questo livello di grasso corporeo è generalmente accettabile per una buona salute.</string>
+    <string name="d5_it">Questo livello di grasso corporeo indica un accumulo eccessivo di grasso.</string>
+    <string name="d6_it">Chiedi al tuo medico come ridurre in sicurezza il grasso corporeo.</string>
+
+<!--    french-->
+    <string name="app_name_fr">Calculateur de graisse corporelle</string>
+    <string name="how_fr"><u>Connaître la méthode de calcul</u></string>
+    <string name="height_fr">Hauteur</string>
+    <string name="Weight_fr">Poids</string>
+    <string name="Waist_fr">Taille</string>
+    <string name="Neck_fr">Cou</string>
+    <string name="Hip_fr">Hip</string>
+    <string name="Gender_fr">Genre</string>
+    <string name="Calculate_fr">Calculer</string>
+    <string name="about_fr">
+\n<b>États-Unis Méthode Marine:</b>\n
+
+Il existe de nombreuses techniques spécifiques utilisées pour mesurer la graisse corporelle. Le calculateur ci-dessus utilise une méthode impliquant des équations développées au Naval Health Research Center par Hodgdon et Beckett en 1984.\n\n
+<b>Formule de pourcentage de graisse corporelle (BFP) pour les hommes:</b>\n
+
+
+SI, unités métriques:\n
+BFP =
+495/(1,0324 - 0,19077×log10(taille-cou) + 0,15456×log10(hauteur))
+        -450\n\n<b>Formule de pourcentage de graisse corporelle (BFP) pour les femmes:</b>\n
+
+SI, unités métriques:\n
+BFP =
+495/(1,29579 - 0,35004×log10(taille+hanche-cou) + 0,22100×log10(hauteur))
+- 450
+
+    </string>
+    <string name="your_fr">Votre pourcentage de graisse corporelle est:</string>
+    <string name="lean_fr">LEAN</string>
+    <string name="title_fr">TABLEAU % DE GRAISSE CORPORELLE</string>
+    <string name="m_fr">HOMMES</string>
+    <string name="f_fr">FEMMES</string>
+    <string name="male_fr">Homme</string>
+    <string name="female_fr">Femme</string>
+    <string name="toast_fr">Veuillez saisir vos mesures de taille, poids, tour de taille, cou et hanches.</string>
+    <string name="l1_fr">FAIBLE RISQUE DE GRAISSE CORPORELLE</string>
+    <string name="l2_fr">ULTRA LEAN</string>
+    <string name="l3_fr">LEAN</string>
+    <string name="l4_fr">MODÉRÉMENT GRAS</string>
+    <string name="l5_fr">EXCÈS DE GRAISSES</string>
+    <string name="l6_fr">RISQUE ÉLEVÉ DE GRAISSE CORPORELLE</string>
+    <string name="d1_fr">Demandez à votre médecin comment augmenter votre masse grasse en toute sécurité.</string>
+    <string name="d2_fr">C\'est le taux de graisse corporelle que l\'on retrouve souvent chez la plupart des sportifs de haut niveau.</string>
+    <string name="d3_fr">Ce niveau de graisse corporelle est inférieur à celui de la plupart des gens et excellent pour la santé.</string>
+    <string name="d4_fr">Ce taux de graisse corporelle est généralement acceptable pour une bonne santé.</string>
+    <string name="d5_fr">Ce taux de graisse corporelle indique une accumulation excessive de graisse.</string>
+    <string name="d6_fr">Demandez à votre médecin comment réduire votre graisse corporelle en toute sécurité.</string>
+
+<!--    portuguese-->
+    <string name="app_name_pt">Calculadora de gordura corporal</string>
+    <string name="how_pt"><u>Conheça o método de cálculo</u></string>
+    <string name="height_pt">Altura</string>
+    <string name="Weight_pt">Peso</string>
+    <string name="Waist_pt">Cintura</string>
+    <string name="Neck_pt">Pescoço</string>
+    <string name="Hip_pt">Quadril</string>
+    <string name="Gender_pt">Sexo</string>
+    <string name="Calculate_pt">Calcular</string>
+    <string name="about_pt">
+\n<b>EUA Método Marinha:</b>\n
+
+Existem muitas técnicas específicas usadas para medir a gordura corporal. A calculadora acima usa um método que envolve equações desenvolvidas no Naval Health Research Center por Hodgdon e Beckett em 1984.\n\n
+<b>Fórmula de percentual de gordura corporal (GC) para homens:</b>\n
+
+
+SI, unidades métricas:\n
+PBF =
+495/(1,0324 - 0,19077×log10(cintura-pescoço) + 0,15456×log10(altura))
+        - 450\n\n<b>Fórmula de porcentagem de gordura corporal (GC) para mulheres:</b>\n
+
+SI, unidades métricas:\n
+PBF =
+495/(1,29579 - 0,35004×log10(cintura+quadril-pescoço) + 0,22100×log10(altura))
+- 450
+
+    </string>
+    <string name="your_pt">Sua porcentagem de gordura corporal é:</string>
+    <string name="lean_pt">LEAN</string>
+    <string name="title_pt">GRÁFICO DE % DE GORDURA CORPORAL</string>
+    <string name="m_pt"> HOMENS</string>
+    <string name="f_pt">MULHERES</string>
+    <string name="male_pt">Masculino</string>
+    <string name="female_pt">Feminino</string>
+    <string name="toast_pt">Insira suas medidas de altura, peso, cintura, pescoço e quadril.</string>
+    <string name="l1_pt">BAIXO RISCO DE GORDURA CORPORAL</string>
+    <string name="l2_pt">ULTRA LEAN</string>
+    <string name="l3_pt">LEAN</string>
+    <string name="l4_pt">MODERADAMENTE GORDO</string>
+    <string name="l5_pt">EXCESSO DE GORDURA</string>
+    <string name="l6_pt">ELEVADO RISCO DE GORDURA CORPORAL</string>
+    <string name="d1_pt">Pergunte ao seu médico sobre como aumentar sua gordura corporal com segurança.</string>
+    <string name="d2_pt">Este é o nível de gordura corporal frequentemente encontrado na maioria dos atletas de elite.</string>
+    <string name="d3_pt">Este nível de gordura corporal é inferior ao da maioria das pessoas e excelente para a saúde.</string>
+    <string name="d4_pt">Este nível de gordura corporal é geralmente aceitável para uma boa saúde.</string>
+    <string name="d5_pt">Este nível de gordura corporal indica um acúmulo excessivo de gordura.</string>
+    <string name="d6_pt">Pergunte ao seu médico sobre como diminuir sua gordura corporal com segurança.</string>
+
+<!--    russian-->
+    <string name="app_name_ru">Калькулятор содержания жира</string>
+    <string name="how_ru"><u>Знать о методе расчета</u></string>
+    <string name="height_ru">Высота</string>
+    <string name="Weight_ru">Вес</string>
+    <string name="Waist_ru">Талия</string>
+    <string name="Neck_ru">Шея</string>
+    <string name="Hip_ru">Хип</string>
+    <string name="Gender_ru">Пол</string>
+    <string name="Calculate_ru">Рассчитать</string>
+    <string name="about_ru">
+\n<b>США Метод военно-морского флота:</b>\n
+
+Существует множество конкретных методов измерения жира в организме. В приведенном выше калькуляторе используется метод, основанный на уравнениях, разработанных Ходждоном и Беккетом в Исследовательском центре военно-морского здравоохранения в 1984 году.\n\n
+<b>Формула процентного содержания телесного жира (BFP) для мужчин:</b>\n
+
+
+СИ, метрические единицы:\n
+БФП =
+495/(1,0324 - 0,19077×log10(обхват талии и шеи) + 0,15456×log10(рост))
+        - 450\n\n<b>Формула процентного содержания жира в организме (BFP) для женщин:</b>\n
+
+СИ, метрические единицы:\n
+БФП =
+495/(1,29579 - 0,35004×log10(талия+бедра-шея) + 0,22100×log10(рост))
+- 450
+
+    </string>
+    <string name="your_ru">Ваш процент жира в организме:</string>
+    <string name="lean_ru">LEAN</string>
+    <string name="title_ru">ТАБЛИЦА % ЖИРА В ТЕЛЕ</string>
+    <string name="m_ru">МУЖЧИНЫ</string>
+    <string name="f_ru">ЖЕНЩИНЫ</string>
+    <string name="male_ru">Мужчина</string>
+    <string name="female_ru">Женский</string>
+    <string name="toast_ru">Укажите свой рост, вес, размеры талии, шеи и бедер.</string>
+    <string name="l1_ru">НИЗКИЙ РИСК ЖИРА</string>
+    <string name="l2_ru">УЛЬТРА ЭКОНОМИЧНОСТЬ</string>
+    <string name="l3_ru">ЭКОНОМИЧНОСТЬ</string>
+    <string name="l4_ru">УМЕРЕННО ЖИРНЫЙ</string>
+    <string name="l5_ru">ЛИШНИЙ ЖИР</string>
+    <string name="l6_ru">ВЫСОКИЙ РИСК ЖИРА</string>
+    <string name="d1_ru">Спросите своего врача о том, как безопасно увеличить жировые отложения.</string>
+    <string name="d2_ru">Это уровень жира в организме, который часто встречается у большинства элитных спортсменов.</string>
+    <string name="d3_ru">Этот уровень жира в организме ниже, чем у большинства людей, и полезен для здоровья.</string>
+    <string name="d4_ru">Такой уровень жира в организме обычно приемлем для хорошего здоровья.</string>
+    <string name="d5_ru">Такой уровень жира в организме указывает на избыточное накопление жира.</string>
+    <string name="d6_ru">Спросите своего врача о том, как безопасно уменьшить жировые отложения.</string>
+
+
+<!--    German-->
+    <string name="app_name_de">Körperfettrechner</string>
+    <string name="how_de"><u>Wissen Sie über die Berechnungsmethode</u></string>
+    <string name="height_de">Höhe</string>
+    <string name="Weight_de">Gewicht</string>
+    <string name="Waist_de">Taille</string>
+    <string name="Neck_de">Hals</string>
+    <string name="Hip_de">Hüfte</string>
+    <string name="Gender_de">Geschlecht</string>
+    <string name="Calculate_de">Berechnen</string>
+    <string name="about_de">
+\n<b>USA Navy-Methode:</b>\n
+
+Es gibt viele spezifische Techniken zur Messung des Körperfetts. Der obige Rechner verwendet eine Methode mit Gleichungen, die 1984 von Hodgdon und Beckett am Naval Health Research Center entwickelt wurden.\n\n
+<b>Formel für den Körperfettanteil (BFP) für Männer:</b>\n
+
+
+SI, metrische Einheiten:\n
+BFP =
+495/(1,0324 - 0,19077×log10(Taille-Hals) + 0,15456×log10(Höhe))
+        - 450\n\n<b>Formel für den Körperfettanteil (BFP) für Frauen:</b>\n
+
+SI, metrische Einheiten:\n
+BFP =
+495/(1,29579 - 0,35004×log10(Taille+Hüfthals) + 0,22100×log10(Höhe))
+- 450
+
+    </string>
+    <string name="your_de">Ihr Körperfettanteil beträgt:</string>
+    <string name="lean_de">LEAN</string>
+    <string name="title_de">KÖRPERFETT-%-TABELLE</string>
+    <string name="m_de">MÄNNER</string>
+    <string name="f_de">FRAUEN</string>
+    <string name="male_de">Männlich</string>
+    <string name="female_de">Weiblich</string>
+    <string name="toast_de">Bitte geben Sie Ihre Größe, Ihr Gewicht sowie Ihre Taillen-, Hals- und Hüftmaße ein.</string>
+    <string name="l1_de">Geringes Körperfettrisiko</string>
+    <string name="l2_de">ULTRA LEAN</string>
+    <string name="l3_de">LEAN</string>
+    <string name="l4_de">MÄSSIG FETT</string>
+    <string name="l5_de">ÜBERSCHÜSSIGES FETT</string>
+    <string name="l6_de">RISIKO VON HOHEM KÖRPERFETT</string>
+    <string name="d1_de">Fragen Sie Ihren Arzt, wie Sie Ihren Körperfettanteil sicher steigern können.</string>
+    <string name="d2_de">Dies ist der Körperfettanteil, der bei den meisten Spitzensportlern häufig zu finden ist.</string>
+    <string name="d3_de">Dieser Körperfettanteil ist niedriger als bei den meisten Menschen und hervorragend für die Gesundheit.</string>
+    <string name="d4_de">Dieser Körperfettanteil ist im Allgemeinen für eine gute Gesundheit akzeptabel.</string>
+    <string name="d5_de">Dieser Körperfettwert weist auf eine übermäßige Fettansammlung hin.</string>
+    <string name="d6_de">Fragen Sie Ihren Arzt, wie Sie Ihr Körperfett sicher reduzieren können.</string>
 </resources>

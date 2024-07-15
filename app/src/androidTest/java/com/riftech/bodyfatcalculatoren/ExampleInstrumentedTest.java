@@ -1,4 +1,4 @@
-package com.riftech.bodyfatcalculator;
+package com.riftech.bodyfatcalculatoren;
 
 import android.content.Context;
 
