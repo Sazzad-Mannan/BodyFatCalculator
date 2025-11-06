@@ -38,15 +38,15 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
 
         TextView txt1=(TextView)findViewById(R.id.textView3);
         TextView txt2=(TextView)findViewById(R.id.textView6);
-        TextView txt3=(TextView)findViewById(R.id.textView13);
-        TextView txt4=(TextView)findViewById(R.id.textView25);
-        TextView txt5=(TextView)findViewById(R.id.textView24);
-        TextView txt6=(TextView)findViewById(R.id.textView23);
-        TextView txt7=(TextView)findViewById(R.id.textView22);
-        TextView txt8=(TextView)findViewById(R.id.textView20);
+//        TextView txt3=(TextView)findViewById(R.id.textView13);
+//        TextView txt4=(TextView)findViewById(R.id.textView25);
+//        TextView txt5=(TextView)findViewById(R.id.textView24);
+//        TextView txt6=(TextView)findViewById(R.id.textView23);
+//        TextView txt7=(TextView)findViewById(R.id.textView22);
+//        TextView txt8=(TextView)findViewById(R.id.textView20);
         //ImageView img=(ImageView)findViewById(R.id.imageView);
         txt=(TextView)findViewById(R.id.textView);
-        txt12=(TextView)findViewById(R.id.textView12);
+//        txt12=(TextView)findViewById(R.id.textView12);
         txt14=(TextView)findViewById(R.id.textView14);
         txt15=(TextView)findViewById(R.id.textView15);
         txt16=(TextView)findViewById(R.id.textView16);
@@ -70,15 +70,15 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
 
         if(Objects.equals(gender, male)){
 
-            txt3.setText(men);
+//            txt3.setText(men);
            // img.setImageResource(R.drawable.bfpm);
         }else{
-            txt3.setText(women);
-            txt4.setText(getString(R.string.f1));
-            txt5.setText(getString(R.string.f2));
-            txt6.setText(getString(R.string.f3));
-            txt7.setText(getString(R.string.f4));
-            txt8.setText(getString(R.string.f5));
+//            txt3.setText(women);
+//            txt4.setText(getString(R.string.f1));
+//            txt5.setText(getString(R.string.f2));
+//            txt6.setText(getString(R.string.f3));
+//            txt7.setText(getString(R.string.f4));
+//            txt8.setText(getString(R.string.f5));
 
            // img.setImageResource(R.drawable.bfpf);
         }
@@ -129,8 +129,8 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
         txt15.setText(l2);
         txt16.setText(l3);
         txt17.setText(l4);
-        txt18.setText(l6);
-        txt19.setText(l5);
+        txt18.setText(l5);
+        txt19.setText(l6);
     }
 
     public void changelang() {
@@ -149,7 +149,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5);
                 l6=getString(R.string.l6);
                 txt.setText(getString(R.string.your));
-                txt12.setText(getString(R.string.title));
+//                txt12.setText(getString(R.string.title));
                 txt27.setText(getString(R.string.d1));
                 txt29.setText(getString(R.string.d2));
                 txt35.setText(getString(R.string.d3));
@@ -170,7 +170,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5_ind);
                 l6=getString(R.string.l6_ind);
                 txt.setText(getString(R.string.your_ind));
-                txt12.setText(getString(R.string.title_ind));
+//                txt12.setText(getString(R.string.title_ind));
                 txt27.setText(getString(R.string.d1_ind));
                 txt29.setText(getString(R.string.d2_ind));
                 txt35.setText(getString(R.string.d3_ind));
@@ -191,7 +191,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5_sp);
                 l6=getString(R.string.l6_sp);
                 txt.setText(getString(R.string.your_sp));
-                txt12.setText(getString(R.string.title_sp));
+//                txt12.setText(getString(R.string.title_sp));
                 txt27.setText(getString(R.string.d1_sp));
                 txt29.setText(getString(R.string.d2_sp));
                 txt35.setText(getString(R.string.d3_sp));
@@ -212,7 +212,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5_fr);
                 l6=getString(R.string.l6_fr);
                 txt.setText(getString(R.string.your_fr));
-                txt12.setText(getString(R.string.title_fr));
+//                txt12.setText(getString(R.string.title_fr));
                 txt27.setText(getString(R.string.d1_fr));
                 txt29.setText(getString(R.string.d2_fr));
                 txt35.setText(getString(R.string.d3_fr));
@@ -233,7 +233,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5_it);
                 l6=getString(R.string.l6_it);
                 txt.setText(getString(R.string.your_it));
-                txt12.setText(getString(R.string.title_it));
+//                txt12.setText(getString(R.string.title_it));
                 txt27.setText(getString(R.string.d1_it));
                 txt29.setText(getString(R.string.d2_it));
                 txt35.setText(getString(R.string.d3_it));
@@ -254,7 +254,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5_de);
                 l6=getString(R.string.l6_de);
                 txt.setText(getString(R.string.your_de));
-                txt12.setText(getString(R.string.title_de));
+//                txt12.setText(getString(R.string.title_de));
                 txt27.setText(getString(R.string.d1_de));
                 txt29.setText(getString(R.string.d2_de));
                 txt35.setText(getString(R.string.d3_de));
@@ -275,7 +275,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5_pt);
                 l6=getString(R.string.l6_pt);
                 txt.setText(getString(R.string.your_pt));
-                txt12.setText(getString(R.string.title_pt));
+//                txt12.setText(getString(R.string.title_pt));
                 txt27.setText(getString(R.string.d1_pt));
                 txt29.setText(getString(R.string.d2_pt));
                 txt35.setText(getString(R.string.d3_pt));
@@ -296,7 +296,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5_ru);
                 l6=getString(R.string.l6_ru);
                 txt.setText(getString(R.string.your_ru));
-                txt12.setText(getString(R.string.title_ru));
+//                txt12.setText(getString(R.string.title_ru));
                 txt27.setText(getString(R.string.d1_ru));
                 txt29.setText(getString(R.string.d2_ru));
                 txt35.setText(getString(R.string.d3_ru));
@@ -317,7 +317,7 @@ TextView txt,txt12,txt13,txt14,txt15,txt16,txt17,txt18,txt19,txt27,txt29,txt35,t
                 l5=getString(R.string.l5);
                 l6=getString(R.string.l6);
                 txt.setText(getString(R.string.your));
-                txt12.setText(getString(R.string.title));
+//                txt12.setText(getString(R.string.title));
                 txt27.setText(getString(R.string.d1));
                 txt29.setText(getString(R.string.d2));
                 txt35.setText(getString(R.string.d3));

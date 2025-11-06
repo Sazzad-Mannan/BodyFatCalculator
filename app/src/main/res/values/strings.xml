@@ -7,11 +7,9 @@
     <string name="Neck">Neck</string>
     <string name="Hip">Hip</string>
     <string name="Gender">Gender</string>
+    <string name="body">Body Measurement</string>
     <string name="Calculate">Calculate</string>
-    <string name="about">
-\n<b>U.S. Navy Method:</b>\n
-
-There are many specific techniques used for measuring body fat. The calculator above uses a method involving equations developed at the Naval Health Research Center by Hodgdon and Beckett in 1984.\n\n
+    <string name="about"><b>U.S. Navy Method:</b>\nThere are many specific techniques used for measuring body fat. The calculator above uses a method involving equations developed at the Naval Health Research Center by Hodgdon and Beckett in 1984.\n\n
 <b>Body fat percentage (BFP) formula for males:</b>\n
 
 
@@ -45,16 +43,16 @@ BFP =
     <string name="l4">MODERATELY FAT</string>
     <string name="l5">EXCESS FAT</string>
     <string name="l6">HIGH BODY FAT RISK</string>
-    <string name="m1">5%</string>
-    <string name="m2">8%</string>
-    <string name="m3">12%</string>
-    <string name="m4">20%</string>
-    <string name="m5">30%</string>
-    <string name="f1">15%</string>
-    <string name="f2">18%</string>
-    <string name="f3">22%</string>
-    <string name="f4">30%</string>
-    <string name="f5">40%</string>
+    <string name="m1">&lt;5%</string>
+    <string name="m2">&lt;8%</string>
+    <string name="m3">&lt;12%</string>
+    <string name="m4">&lt;20%</string>
+    <string name="m5">&lt;30%</string>
+    <string name="f1">&lt;15%</string>
+    <string name="f2">&lt;18%</string>
+    <string name="f3">&lt;22%</string>
+    <string name="f4">&lt;30%</string>
+    <string name="f5">&lt;40%</string>
     <string name="d1">Ask your healthcare provider about how to safely increase your body fat.</string>
     <string name="d2">This is the body fat level that is often found in most elite athletes.</string>
     <string name="d3">This body fat level is lower than most people and excellent for health.</string>
@@ -72,11 +70,9 @@ BFP =
     <string name="Neck_ind">Leher</string>
     <string name="Hip_ind">Pinggul</string>
     <string name="Gender_ind">Jenis Kelamin</string>
+    <string name="body_ind">Pengukuran tubuh</string>
     <string name="Calculate_ind">Hitung</string>
-    <string name="about_ind">
-\n<b>AS. Metode Angkatan Laut:</b>\n
-
-Ada banyak teknik khusus yang digunakan untuk mengukur lemak tubuh. Kalkulator di atas menggunakan metode yang melibatkan persamaan yang dikembangkan di Pusat Penelitian Kesehatan Angkatan Laut oleh Hodgdon dan Beckett pada tahun 1984.\n\n
+    <string name="about_ind"><b>AS. Metode Angkatan Laut:</b>\nAda banyak teknik khusus yang digunakan untuk mengukur lemak tubuh. Kalkulator di atas menggunakan metode yang melibatkan persamaan yang dikembangkan di Pusat Penelitian Kesehatan Angkatan Laut oleh Hodgdon dan Beckett pada tahun 1984.\n\n
 <b>Rumus persentase lemak tubuh (BFP) untuk pria:</b>\n
 
 
@@ -122,11 +118,9 @@ BFP =
     <string name="Neck_sp">Cuello</string>
     <string name="Hip_sp">Cadera</string>
     <string name="Gender_sp">Género</string>
+    <string name="body_sp">Medición corporal</string>
     <string name="Calculate_sp">Calcular</string>
-    <string name="about_sp">
-        \n<b>EE.UU. Método azul marino:</b>\n
-
-        Existen muchas técnicas específicas que se utilizan para medir la grasa corporal. La calculadora anterior utiliza un método que involucra ecuaciones desarrolladas en el Centro de Investigación de Salud Naval por Hodgdon y Beckett en 1984.\n\n
+    <string name="about_sp"><b>EE.UU. Método azul marino:</b>\nExisten muchas técnicas específicas que se utilizan para medir la grasa corporal. La calculadora anterior utiliza un método que involucra ecuaciones desarrolladas en el Centro de Investigación de Salud Naval por Hodgdon y Beckett en 1984.\n\n
         <b>Fórmula de porcentaje de grasa corporal (BFP) para hombres:</b>\n
 
 
@@ -171,11 +165,10 @@ BFP =
     <string name="Neck_it">Collo</string>
     <string name="Hip_it">Anca</string>
     <string name="Gender_it">Sesso</string>
-    <string name="Calculate_it">Calcola</string>
-    <string name="about_it">
-\n<b>Stati Uniti Metodo della Marina:</b>\n
+    <string name="body_it">Misurazione del corpo</string>
 
-Esistono molte tecniche specifiche utilizzate per misurare il grasso corporeo. Il calcolatore qui sopra utilizza un metodo che coinvolge equazioni sviluppato presso il Naval Health Research Center da Hodgdon e Beckett nel 1984.\n\n
+    <string name="Calculate_it">Calcola</string>
+    <string name="about_it"><b>Stati Uniti Metodo della Marina:</b>\nEsistono molte tecniche specifiche utilizzate per misurare il grasso corporeo. Il calcolatore qui sopra utilizza un metodo che coinvolge equazioni sviluppato presso il Naval Health Research Center da Hodgdon e Beckett nel 1984.\n\n
 <b>Formula della percentuale di grasso corporeo (BFP) per i maschi:</b>\n
 
 
@@ -220,11 +213,9 @@ BFP =
     <string name="Neck_fr">Cou</string>
     <string name="Hip_fr">Hip</string>
     <string name="Gender_fr">Genre</string>
+    <string name="body_fr">Mesure du corps</string>
     <string name="Calculate_fr">Calculer</string>
-    <string name="about_fr">
-\n<b>États-Unis Méthode Marine:</b>\n
-
-Il existe de nombreuses techniques spécifiques utilisées pour mesurer la graisse corporelle. Le calculateur ci-dessus utilise une méthode impliquant des équations développées au Naval Health Research Center par Hodgdon et Beckett en 1984.\n\n
+    <string name="about_fr"><b>États-Unis Méthode Marine:</b>\nIl existe de nombreuses techniques spécifiques utilisées pour mesurer la graisse corporelle. Le calculateur ci-dessus utilise une méthode impliquant des équations développées au Naval Health Research Center par Hodgdon et Beckett en 1984.\n\n
 <b>Formule de pourcentage de graisse corporelle (BFP) pour les hommes:</b>\n
 
 
@@ -269,11 +260,10 @@ BFP =
     <string name="Neck_pt">Pescoço</string>
     <string name="Hip_pt">Quadril</string>
     <string name="Gender_pt">Sexo</string>
-    <string name="Calculate_pt">Calcular</string>
-    <string name="about_pt">
-\n<b>EUA Método Marinha:</b>\n
+    <string name="body_pt">Medição corporal</string>
 
-Existem muitas técnicas específicas usadas para medir a gordura corporal. A calculadora acima usa um método que envolve equações desenvolvidas no Naval Health Research Center por Hodgdon e Beckett em 1984.\n\n
+    <string name="Calculate_pt">Calcular</string>
+    <string name="about_pt"><b>EUA Método Marinha:</b>\nExistem muitas técnicas específicas usadas para medir a gordura corporal. A calculadora acima usa um método que envolve equações desenvolvidas no Naval Health Research Center por Hodgdon e Beckett em 1984.\n\n
 <b>Fórmula de percentual de gordura corporal (GC) para homens:</b>\n
 
 
@@ -319,10 +309,7 @@ PBF =
     <string name="Hip_ru">Хип</string>
     <string name="Gender_ru">Пол</string>
     <string name="Calculate_ru">Рассчитать</string>
-    <string name="about_ru">
-\n<b>США Метод военно-морского флота:</b>\n
-
-Существует множество конкретных методов измерения жира в организме. В приведенном выше калькуляторе используется метод, основанный на уравнениях, разработанных Ходждоном и Беккетом в Исследовательском центре военно-морского здравоохранения в 1984 году.\n\n
+    <string name="about_ru"><b>США Метод военно-морского флота:</b>\nСуществует множество конкретных методов измерения жира в организме. В приведенном выше калькуляторе используется метод, основанный на уравнениях, разработанных Ходждоном и Беккетом в Исследовательском центре военно-морского здравоохранения в 1984 году.\n\n
 <b>Формула процентного содержания телесного жира (BFP) для мужчин:</b>\n
 
 
@@ -350,6 +337,7 @@ PBF =
     <string name="l3_ru">ЭКОНОМИЧНОСТЬ</string>
     <string name="l4_ru">УМЕРЕННО ЖИРНЫЙ</string>
     <string name="l5_ru">ЛИШНИЙ ЖИР</string>
+    <string name="body_ru">Измерение тела</string>
     <string name="l6_ru">ВЫСОКИЙ РИСК ЖИРА</string>
     <string name="d1_ru">Спросите своего врача о том, как безопасно увеличить жировые отложения.</string>
     <string name="d2_ru">Это уровень жира в организме, который часто встречается у большинства элитных спортсменов.</string>
@@ -368,11 +356,10 @@ PBF =
     <string name="Neck_de">Hals</string>
     <string name="Hip_de">Hüfte</string>
     <string name="Gender_de">Geschlecht</string>
-    <string name="Calculate_de">Berechnen</string>
-    <string name="about_de">
-\n<b>USA Navy-Methode:</b>\n
+    <string name="body_de">Körpermessung</string>
 
-Es gibt viele spezifische Techniken zur Messung des Körperfetts. Der obige Rechner verwendet eine Methode mit Gleichungen, die 1984 von Hodgdon und Beckett am Naval Health Research Center entwickelt wurden.\n\n
+    <string name="Calculate_de">Berechnen</string>
+    <string name="about_de"><b>USA Navy-Methode:</b>\nEs gibt viele spezifische Techniken zur Messung des Körperfetts. Der obige Rechner verwendet eine Methode mit Gleichungen, die 1984 von Hodgdon und Beckett am Naval Health Research Center entwickelt wurden.\n\n
 <b>Formel für den Körperfettanteil (BFP) für Männer:</b>\n
 
 

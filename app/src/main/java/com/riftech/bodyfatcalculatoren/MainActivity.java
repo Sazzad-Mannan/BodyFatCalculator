@@ -1,5 +1,6 @@
 package com.riftech.bodyfatcalculatoren;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -20,9 +21,20 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.InstallStatus;
+import com.google.android.play.core.install.model.UpdateAvailability;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int UPDATE_REQUEST_CODE = 123;
+    private AppUpdateManager appUpdateManager;
 
     String h_unit,w_unit,gender,wi_unit,n_unit,p_unit,male,female;
     double height,weight,bmi,waist,neck,hip,bfp;
@@ -30,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     AlertDialog customAlertDialog;
     SharedPreferences sharedPreferences;
     String selected_lang,st,tost;
-TextView txt10,txt2,txt4,txt5,txt7,txt9,txt8;
+TextView txt10,txt2,txt4,txt5,txt7,txt9,txt8,titletxt;
     Button button;
     String[] countries;
     int selected_index;
@@ -68,21 +80,22 @@ TextView txt10,txt2,txt4,txt5,txt7,txt9,txt8;
         Spinner dropdown = findViewById(R.id.spinner);
         Spinner dropdown1 = findViewById(R.id.spinner3);
         Spinner dropdown2 = findViewById(R.id.spinner4);
-        Spinner dropdown3 = findViewById(R.id.spinner6);
+        Spinner dropdown3 = findViewById(R.id.spinnerNeck);
 
-        Spinner dropdown5 = findViewById(R.id.spinner8);
+        Spinner dropdown5 = findViewById(R.id.spinnerHip);
         EditText editText1 = (EditText)findViewById(R.id.editTextNumberDecimal3);
         EditText editText2 = (EditText)findViewById(R.id.editTextNumberDecimal5);
         EditText editText3 = (EditText)findViewById(R.id.editTextNumberDecimal6);
-        EditText editText4 = (EditText)findViewById(R.id.editTextNumberDecimal8);
-        EditText editText5 = (EditText)findViewById(R.id.editTextNumberDecimal10);
+        EditText editText4 = (EditText)findViewById(R.id.editTextNeck);
+        EditText editText5 = (EditText)findViewById(R.id.editTextHip);
+        titletxt=(TextView)findViewById(R.id.titleText);
         txt10=(TextView)findViewById(R.id.textView10);
         txt2=(TextView)findViewById(R.id.textView2);
         txt8=(TextView)findViewById(R.id.textView8);
         txt4=(TextView)findViewById(R.id.textView4);
         txt5=(TextView)findViewById(R.id.textView5);
-        txt9=(TextView)findViewById(R.id.textView9);
-        txt7=(TextView)findViewById(R.id.textView7);
+        txt7=(TextView)findViewById(R.id.textViewNeck);
+        txt9=(TextView)findViewById(R.id.textViewHip);
         r1=(RadioButton)findViewById(R.id.radioButton3);
         r2=(RadioButton)findViewById(R.id.radioButton4);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
@@ -214,6 +227,71 @@ if(Objects.equals(gender, r1.getText().toString())){
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Always check for updates when user returns to the app
+        checkForUpdate();
+    }
+
+    private void checkForUpdate() {
+        try {
+            appUpdateManager = AppUpdateManagerFactory.create(this);
+            Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+
+            appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
+                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                        && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
+
+                    try {
+                        appUpdateManager.startUpdateFlowForResult(
+                                appUpdateInfo,
+                                AppUpdateType.FLEXIBLE,
+                                this,
+                                UPDATE_REQUEST_CODE
+                        );
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                } else if (appUpdateInfo.installStatus() == InstallStatus.DOWNLOADED) {
+                    showCompleteUpdateSnackbar();
+                }
+            });
+
+            appUpdateInfoTask.addOnFailureListener(e -> {
+                // Play Store not available, or update API failed — ignore silently
+                e.printStackTrace();
+            });
+
+        } catch (Exception e) {
+            // Catch anything unexpected (e.g., no Play Services)
+            e.printStackTrace();
+        }
+    }
+
+
+    private void showCompleteUpdateSnackbar() {
+        Snackbar snackbar = Snackbar.make(
+                findViewById(android.R.id.content),
+                "Update ready! Restart to apply.",
+                Snackbar.LENGTH_INDEFINITE
+        );
+        snackbar.setAction("Restart", view -> appUpdateManager.completeUpdate());
+        snackbar.show();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == UPDATE_REQUEST_CODE) {
+            if (resultCode != RESULT_OK) {
+                Toast.makeText(this, "Update canceled. You will be reminded again.", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
     // create an action bar button
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -239,7 +317,7 @@ if(Objects.equals(gender, r1.getText().toString())){
             builder = new AlertDialog.Builder(MainActivity.this);
 
             // set the custom icon to the alert dialog
-            builder.setIcon(R.drawable.lang);
+            builder.setIcon(R.drawable.outline_language_24);
 
             // title of the alert dialog
             builder.setTitle("Change Language:");
@@ -296,11 +374,17 @@ if(Objects.equals(gender, r1.getText().toString())){
             try {
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Love Calculator");
-                String shareMessage= "\nLet me recommend you this application\n\n";
-                shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName() +"\n\n";
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "💪 Body Fat Calculator App");
+
+                String shareMessage = "✨ Check out this amazing app I’ve been using!\n\n";
+                shareMessage += "🏋️‍♀️ Body Fat Calculator helps you easily calculate your body fat percentage and track your fitness progress.\n\n";
+                shareMessage += "📲 Download now on Google Play:\n";
+                shareMessage += "https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName() + "\n\n";
+                shareMessage += "💥 Stay fit and healthy!";
+
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
-                startActivity(Intent.createChooser(shareIntent, "choose one"));
+                startActivity(Intent.createChooser(shareIntent, "Share Body Fat Calculator"));
+
             } catch(Exception e) {
                 //e.toString();
             }
@@ -320,6 +404,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck));
                 txt9.setText(getString(R.string.Hip));
                 txt8.setText(getString(R.string.Gender));
+                titletxt.setText(getString(R.string.body));
                 tost=getString(R.string.toast);
                 r1.setText(getString(R.string.male));
                 r2.setText(getString(R.string.female));
@@ -334,6 +419,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck_ind));
                 txt9.setText(getString(R.string.Hip_ind));
                 txt8.setText(getString(R.string.Gender_ind));
+                titletxt.setText(getString(R.string.body_ind));
                 tost=getString(R.string.toast_ind);
                 r1.setText(getString(R.string.male_ind));
                 r2.setText(getString(R.string.female_ind));
@@ -348,6 +434,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck_sp));
                 txt9.setText(getString(R.string.Hip_sp));
                 txt8.setText(getString(R.string.Gender_sp));
+                titletxt.setText(getString(R.string.body_sp));
                 tost=getString(R.string.toast_sp);
                 r1.setText(getString(R.string.male_sp));
                 r2.setText(getString(R.string.female_sp));
@@ -362,6 +449,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck_fr));
                 txt9.setText(getString(R.string.Hip_fr));
                 txt8.setText(getString(R.string.Gender_fr));
+                titletxt.setText(getString(R.string.body_fr));
                 tost=getString(R.string.toast_fr);
                 r1.setText(getString(R.string.male_fr));
                 r2.setText(getString(R.string.female_fr));
@@ -376,6 +464,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck_it));
                 txt9.setText(getString(R.string.Hip_it));
                 txt8.setText(getString(R.string.Gender_it));
+                titletxt.setText(getString(R.string.body_it));
                 tost=getString(R.string.toast_it);
                 r1.setText(getString(R.string.male_it));
                 r2.setText(getString(R.string.female_it));
@@ -390,6 +479,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck_de));
                 txt9.setText(getString(R.string.Hip_de));
                 txt8.setText(getString(R.string.Gender_de));
+                titletxt.setText(getString(R.string.body_de));
                 tost=getString(R.string.toast_de);
                 r1.setText(getString(R.string.male_de));
                 r2.setText(getString(R.string.female_de));
@@ -404,6 +494,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck_pt));
                 txt9.setText(getString(R.string.Hip_pt));
                 txt8.setText(getString(R.string.Gender_pt));
+                titletxt.setText(getString(R.string.body_pt));
                 tost=getString(R.string.toast_pt);
                 r1.setText(getString(R.string.male_pt));
                 r2.setText(getString(R.string.female_pt));
@@ -418,6 +509,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck_ru));
                 txt9.setText(getString(R.string.Hip_ru));
                 txt8.setText(getString(R.string.Gender_ru));
+                titletxt.setText(getString(R.string.body_ru));
                 tost=getString(R.string.toast_ru);
                 r1.setText(getString(R.string.male_ru));
                 r2.setText(getString(R.string.female_ru));
@@ -432,6 +524,7 @@ if(Objects.equals(gender, r1.getText().toString())){
                 txt7.setText(getString(R.string.Neck));
                 txt9.setText(getString(R.string.Hip));
                 txt8.setText(getString(R.string.Gender));
+                titletxt.setText(getString(R.string.body));
                 tost=getString(R.string.toast);
                 r1.setText(getString(R.string.male));
                 r2.setText(getString(R.string.female));
